@@ -8,16 +8,9 @@ services:
     ports:
       - "8080:8080"
     environment:
-      # AWS RDS PostgreSQL Database Connection
-      SPRING_DATASOURCE_URL: jdbc:postgresql://database-1.ch6g62s4ign1.ap-south-1.rds.amazonaws.com:5432/postgres
-      SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: Divyashet2003
-      
-      # Hibernate Settings
-      SPRING_JPA_HIBERNATE_DDL_AUTO: update
-      SPRING_JPA_SHOW_SQL: "true"
-      
-      # Security Secrets
-      JWT_SECRET: IM7Wuin9rYQmzWdn+6AQaZFJG2W+lsBN6jv8Lg9Brpc=
-      GOOGLE_CLIENT_ID: mock-client-id-for-local-testing.apps.googleusercontent.com
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
     restart: always
