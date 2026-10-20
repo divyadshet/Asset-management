@@ -34,5 +34,5 @@ jobs:
             export SPRING_DATASOURCE_PASSWORD="${{ secrets.SPRING_DATASOURCE_PASSWORD }}"
             export JWT_SECRET="${{ secrets.JWT_SECRET }}"
             export GOOGLE_CLIENT_ID="${{ secrets.GOOGLE_CLIENT_ID }}"
-            docker-compose down
-            docker-compose up --build -d
+            docker compose down
+            docker compose up --build -d
